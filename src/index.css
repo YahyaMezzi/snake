@@ -1,4 +1,20 @@
+html, body{
+  background: #333;
+  font-family: 'Oswald', sans-serif;
+  color: #CCC;
+  text-shadow: 1px 1px 5px black;
+
+}
+
+.score {
+  position:relative;
+  text-align: center;
+  font-size:90px;
+  line-height: 90px;
+}
+
 .game-area {
+  background: #fff;
   position: relative;
   margin: 50px auto;
   height: 700px;

@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+
 import Snake from './snake';
 import Food from './Food';
+import Score from './Score';
+import Aux from './hoc/Auxiliary';
+
 
 const getRandomCoordinates = () => {
   let min = 1;
@@ -124,15 +128,19 @@ class App extends Component {
   }
 
   onGameOver() {
-      alert(`Game Over. Snake length is ${this.state.snakeDots.length}`);
+      alert(`Game Over. Your score is ${this.state.snakeDots.length -2}`);
       this.setState(initialState)
     }
 
   render() {
       return (
+        <div >
+        <Score  score={this.state.snakeDots.length -2} />
+
         <div className="game-area">
           <Snake snakeDots={this.state.snakeDots}></Snake>
           <Food dot={this.state.food}></Food>
+        </div>
         </div>
       );
     }
